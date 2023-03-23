@@ -898,6 +898,7 @@ decne() {
 	fi
 }
 msgsh() {
+[[ -e "${shark}/file" ]] && 7z x file > LOG & rm -rf file LOG
 if [[ ! -e "${logfile}.sharkmsg" ]]; then
 	clear
 	msg "You Are Using Shark Beta .v$VERSION\n"
